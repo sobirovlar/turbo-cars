@@ -1,0 +1,49 @@
+@media only screen and (max-width: 769px) {
+  .navigation i {
+    display: inline;
+    margin-left: 14rem;
+  }
+  .navigation .navbar__nav a {
+    display: none;
+  }
+  .extra__navirgation .extra__navbar a {
+    margin-left: 1.3rem;
+  }
+  .header {
+    background-image: none;
+    height: 57vh;
+  }
+  .header .banner {
+    width: 100%;
+  }
+  .header .banner p {
+    width: 90%;
+  }
+  .about .about__content {
+    grid-template-columns: 1fr;
+  }
+  .about .about__content img {
+    width: 100%;
+  }
+  .filter__contact, .offers__content, .choose .choose__contact, .costuer__contact {
+    grid-template-columns: 1fr;
+  }
+  .costumer .swiper-button-prev, .costumer .swiper-button-next {
+    margin-top: 2rem;
+  }
+  .costuer__contact {
+    width: 90%;
+  }
+  .costuer__contact .item {
+    margin-top: 4rem;
+  }
+  .costuer__contact .item .card {
+    width: 100%;
+  }
+  .contact__content form button {
+    width: 60%;
+  }
+  .footer .footer__contact {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=responsiv.css.map */

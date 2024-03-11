@@ -1,0 +1,401 @@
+@import './_global';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+body{
+    line-height: 1.5;
+}
+@mixin btn($bgc,$bgc2){
+    font-size: 1.3rem;
+    padding: 5px 25px;
+    color: white;
+    transition: 0.5s linear;
+    background-color: $bgc;
+    &:hover{
+        background-color: $bgc2;
+    }
+}
+
+@mixin card ($bgc){
+    width: 100%;
+    padding: 2rem 0;
+    background-color: $bgc;
+}
+
+@mixin grit ($gtc,$item){
+    display: grid;
+    grid-template-columns: $gtc;
+    gap: 2rem   ;
+    align-items: $item;
+}
+@mixin title (){
+  text-align: center;
+  font-size: 2.2rem;
+}
+.navigation{
+    width: 100%;
+    height: 9vh;
+background-color: black;
+i{
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 9vh;
+    align-items: center;
+    .navbar__nav{
+        a{
+            margin-left: 20px;
+            font-size: 1.2rem;
+            color: white;
+            transition: all 0.5s linear;
+            cursor: progress;
+            &:hover{
+                color: rgb(255, 179, 0);
+            }
+        }
+    }
+}
+}
+.extra__navirgation{
+    background-color: #fe5b29;
+    width: 100%;
+    height: 7vh;
+    .extra__navbar{
+        width: 70%;
+        height: 7vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        a{
+            color: white;
+        }
+    }
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/banner-bg.png);
+    background-size: cover;
+  
+    .banner{
+        width: 50%;
+      padding-top: 15%;
+      h1{
+      &:first-of-type{
+
+        font-size: 3rem;
+      } 
+        &:last-of-type{
+   
+        font-size: 3rem;
+        color: #fe5b29;
+      }  
+      }
+      p{
+        width: 70%;
+        margin-bottom: 1rem;
+      
+      }
+      button{
+        &:first-of-type{
+
+
+             @include btn(#fe5b29,black  )
+       
+            
+        }
+        &:last-of-type{
+            @include btn(black,black )
+        }
+      }
+      .swiper{
+        height: 300px;
+      }
+     
+     
+       
+    }
+}
+
+.about{
+    @include card(#fff);
+}
+
+    .about__content{
+        @include grit(repeat(2,1fr),center );
+        .item{
+            h2{
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   span{
+    color: #fe5b29;
+   }
+            }
+            p{
+                text-align: justify;
+                margin-bottom: 1rem;
+            }
+            button{
+                @include btn(#fe5b29, #2b2b22 );
+            }
+        }
+    }
+.filter{
+    @include card(#2b2b22);
+    .title{
+        h2{
+            color: white;
+            font-size: 2.3rem ;
+        }
+        p{
+            color: white;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+    }
+}
+
+    .filter__contact{
+        @include grit(repeat(4,1fr),center );
+        .item{
+            select{
+                    width: 100%;
+                    height: 6vh;
+                    font-size: 1.3rem;
+                
+            }
+            button{
+                @include btn(#fe5b29,black )
+            }
+           }
+    }
+.offers{
+    @include card(#fff);
+    .title{
+        margin-bottom: 2rem;
+        h2{
+            @include title()
+
+        }
+    }
+}
+
+    .offers__content{
+        @include grit(repeat(3,1fr),center );
+        .item{
+            padding: 1rem 1rem;
+            box-shadow: 0 0  20px grey;
+            transition: all 0.2s linear;
+            &:hover{
+             
+                box-shadow: 0 0 0px rgb(0, 0, 0),
+                0 0 1px rgb(255, 255, 255);
+            }
+       
+        .img{
+            height: 23vh;
+        }
+        text-align: center;
+        h2{
+            margin-bottom: 0.5rem;
+        }
+        p{
+            margin-bottom: 0.5rem;
+            color: #fe5b29;
+            font-weight: bold;
+        }
+        button{
+            @include btn(#fe5b29,black )
+        }
+        
+    }
+    }
+    .choose{
+        @include card(#2b2b22);
+        .title{
+            h2{
+                font-size: 2.3rem;
+                color: white;
+            }
+            margin-bottom: 3rem;
+        }
+        .choose__contact{
+            @include grit(repeat(3,1fr),center );
+            .item{
+                .img{
+                    width: 20%;
+                    margin-bottom: 1rem;
+                }
+                h2,p{
+                    color: white;
+                    width: 90%;
+                }
+               
+            }
+        }
+    }
+.costumer{
+    @include card(#fff);
+    .title{
+        h2{
+            @include title();
+        }
+        margin-bottom: 4rem;
+    }
+    .swiper-button-prev,.swiper-button-next{
+        background-color: #fe5b29;
+        color: white;
+        padding: 25px 25px;
+        font-size: 1.2rem
+    }
+}
+.costuer__contact{
+    @include grit(repeat(2,1fr),center );
+margin: 0 auto;
+    width: 80%;
+    .item{
+        .card{
+            border: 1px solid rgb(255, 255, 255);
+            box-shadow: 0 0 20px grey;
+            text-align: center;
+            width: 85%;
+            margin: 0 auto;
+            p{
+                width: 64%;
+                margin: 0 auto;
+                padding-bottom: 2rem;
+            }
+            .img{
+                width: 35%;
+                margin: 0 auto;
+                margin-top: -40px;
+            }
+        }
+        .img{
+            width: 5%;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+    }
+
+}
+.contact{
+    width: 100%;
+    padding-top: 3rem;
+    .title{
+        h2{
+            @include title();
+        }
+    }
+
+}
+.contact__content{
+    background-color: #fe5b29;
+   padding-bottom: 2rem;
+    padding-top: 10rem;
+    border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+    
+    form{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 1rem   ;
+        input{
+            height: 7vh;
+            font-size: 1.2rem;
+            text-align: center;
+            border: 0;
+            outline: 0;
+            border-radius: 7px;
+        }
+        textarea{
+            padding-top: 1rem;
+            height: 12vh;
+            font-size: 1.2rem;
+            text-align: center;
+            border: 0;
+            outline: 0;
+            border-radius: 7px;  
+        }
+        button{
+            @include btn(red,white );
+            border: 0;
+            width: 20%;
+            margin: 0 auto;
+            &:hover{
+                color: black;
+            }
+        }
+    }
+}
+.footer{
+    @include card(#2b2b22);
+    .title{
+        @include title();
+        padding-bottom: 1.2rem;
+    }
+    .footer__contact{
+        @include grit(repeat(5,1fr),center );
+        color: white;
+        h2{
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            &:first-of-type{
+                margin-top: 0.2rem;
+            }
+        }
+        a{
+            display: block;
+            color: white;
+            margin-top: 10px;
+           
+        }
+        i{
+            border-radius: 100%;
+            padding: 11px 11px ;
+            color: black;
+            margin-top: 1rem;
+            margin-left: 0.6rem;
+            background-color: white;
+            transition: all 0.3s linear;
+            &:hover{
+                background-color: red;
+            }
+        }
+        textarea{
+            background: 0;
+            border: 0;
+            outline: 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid gray;
+        }
+        button{
+            @include btn(red,white );
+            &:hover{
+                color: black;
+            }
+        }
+        
+    }
+}
+.copyright{
+    background-color:#2b2b22;
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+padding-bottom: 1rem;
+}
