@@ -13,6 +13,7 @@
 
     .extra__navirgation{
         .extra__navbar{
+            width: 100%;
             a{
                 margin-left: 1.3rem;
             }
@@ -20,11 +21,14 @@
     }
     .header{
         background-image: none;
-        height: 57vh;
+        height: 65vh;
         .banner{
             width: 100%;
             p{
                 width: 90%;
+            }
+            button{
+                margin-top: 1rem;
             }
         }
     }
@@ -41,17 +45,31 @@
     grid-template-columns: 1fr;
 }
 .costumer{
+    
      .swiper-button-prev,.swiper-button-next{
         margin-top: 2rem;
      }
+     margin: 0 auto;
 }
 .costuer__contact{
     width: 90%;
+    margin: 0 auto;
     .item{
         margin-top: 4rem;
+        margin: 0 auto;
+        height: 65vh;
+        margin-top: 5rem;
+
+
         .card{
             width: 100%;
+        margin: 0 auto;
+        
+        .img{
+           width: 100%;
         }
+        }
+        
     }
 }
 .contact__content{
