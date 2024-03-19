@@ -1,12 +1,18 @@
 @media only screen and (max-width:769px) {
     .navigation{
+        height: 60vh;
         i{
-            display: inline;
-            margin-left: 14rem;
-        }
+            display: block;
+            position: absolute;
+            right: 30px;
+            top: 30px;
+    
+            }
         .navbar__nav{
             a{
-                display: none;
+                display: block;
+              
+
             }
         }
     }
@@ -86,5 +92,11 @@
         grid-template-columns: 1fr;
     }
 }
-
+.long{
+    height: 7vh;
+ }
+ .short{
+    height: 100%;
+    padding-bottom: 2rem;
+ }
 }
